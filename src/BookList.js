@@ -14,9 +14,8 @@ const BookList = () => {
       }
     });
     // if (node) observer.current.observer(node);
-    console.log('node',observer.current);
+    console.log("node", observer.current);
   }, []);
-  
 
   const books = [
     { title: "BookList1" },
@@ -43,13 +42,12 @@ const BookList = () => {
 
   return (
     <section>
-    
       {books.map((book, index) => {
         if (books.length === index + 1) {
           return (
             <h1 ref={lastBookElementRef} key={index}>
               {book.title}
-            </h1>
+	</h1>
           );
         } else {
           return <div key={index}>{book.title}</div>;
@@ -57,7 +55,7 @@ const BookList = () => {
       })}
 
       <div>{loading && "Loading"}</div>
-    </section>
+	</section>
   );
 };
 
